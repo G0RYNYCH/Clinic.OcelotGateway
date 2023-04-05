@@ -4,7 +4,184 @@
   },
   "Routes": [
     {
-      
+      "UpstreamPathTemplate": "api/appointments",
+      "UpstreamHttpMethod": ["Get", "Post"],
+      "DownstreamPathTemplate": "api/appointments",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7118
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "api/appointments/{id}",
+      "UpstreamHttpMethod": ["Get", "Put", "Delete"],
+      "DownstreamPathTemplate": "api/appointments/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7118
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "api/Doctors/GetAll",
+      "UpstreamHttpMethod": ["Get"],
+      "DownstreamPathTemplate": "api/Doctors/GetAll",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7116
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "api/Doctors/GetById/{id}",
+      "UpstreamHttpMethod": ["Get"],
+      "DownstreamPathTemplate": "api/Doctors/GetById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7116
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "api/Doctors/GetDoctorsByOfficeId/{id}",
+      "UpstreamHttpMethod": ["Get"],
+      "DownstreamPathTemplate": "api/Doctors/GetDoctorsByOfficeId/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7116
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "api/Doctors/GetDoctorsBySpecializationId/{id}",
+      "UpstreamHttpMethod": ["Get"],
+      "DownstreamPathTemplate": "api/Doctors/GetDoctorsBySpecializationId/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7116
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "api/Doctors/Create",
+      "UpstreamHttpMethod": ["Post"],
+      "DownstreamPathTemplate": "api/Doctors/Create",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7116
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "api/Doctors/Update/{id}",
+      "UpstreamHttpMethod": ["Put"],
+      "DownstreamPathTemplate": "api/Doctors/Update/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7116
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "api/Doctors/Delete/{id}",
+      "UpstreamHttpMethod": ["Delete"],
+      "DownstreamPathTemplate": "api/Doctors/Delete/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7116
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "api/Patients/GetAll",
+      "UpstreamHttpMethod": ["Get"],
+      "DownstreamPathTemplate": "api/Patients/GetAll",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7116
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "api/Patients/GetById/{id}",
+      "UpstreamHttpMethod": ["Get"],
+      "DownstreamPathTemplate": "api/Patients/GetById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7116
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "api/Patients/Create",
+      "UpstreamHttpMethod": ["Post"],
+      "DownstreamPathTemplate": "api/Patients/Create",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7116
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "api/Patients/Update/{id}",
+      "UpstreamHttpMethod": ["Put"],
+      "DownstreamPathTemplate": "api/Patients/Update/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7116
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "api/Patients/Delete/{id}",
+      "UpstreamHttpMethod": ["Delete"],
+      "DownstreamPathTemplate": "api/Patients/Delete/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7116
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "api/receptionists",
+      "UpstreamHttpMethod": ["Get", "Post"],
+      "DownstreamPathTemplate": "api/receptionists",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7116
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "api/receptionists/{id}",
+      "UpstreamHttpMethod": ["Get", "Put", "Delete"],
+      "DownstreamPathTemplate": "api/receptionists/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7116
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "api/specializations",
+      "UpstreamHttpMethod": ["Get", "Post"],
+      "DownstreamPathTemplate": "api/specializations",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7116
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "api/specializations/{id}",
+      "UpstreamHttpMethod": ["Get", "Put", "Delete"],
+      "DownstreamPathTemplate": "api/specializations/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7116
+      }]
     }
   ]
 }
