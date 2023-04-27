@@ -1,0 +1,17 @@
+version: '3.4'
+
+services: 
+  ocelotgateway:
+    image: ocelotgateway
+    container_name: ocelotgateway_container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5177:80
+    networks: 
+      - clinic_network
+
+networks:
+  clinic_network:
+    external: true
