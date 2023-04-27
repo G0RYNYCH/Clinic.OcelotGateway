@@ -5,23 +5,31 @@ namespace OcelotGateway;
 
 public class Startup
 {
-    public IConfiguration Configuration { get; }
+    // public IConfiguration Configuration { get; }
+    //
+    // public Startup(IConfiguration configuration)
+    // {
+    //     Configuration = configuration;
+    // }
 
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddSwaggerGen();
-        services.AddOcelot(Configuration);
+        services.AddOcelot();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         if (env.IsDevelopment())
         {
-            app.UseSwagger();
-            app.UseSwaggerUI();
+            app.UseDeveloperExceptionPage();
         }
 
-        app.UseHttpsRedirection();
+        app.UseRouting();
+        
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapControllers();
+        });
 
         app.UseOcelot();
     }
